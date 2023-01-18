@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Check your Health parameter</h3>
+          <p class="text">
+            Health Parameter is used to detect your daily health measurement and give warning when your parameter is not good.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>Imsfg121@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="contact.html" autocomplete="off" onsubmit="Mail();reset();return false;">
+            <h3 class="title">Enter Your Details</h3>
+            <div class="input-container">
+                <input type="email" name="email" class="input" id="email">
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+            <div class="input-container">
+              <input type="text" name="name" class="input" id="name">
+              <label for="">SUGAR</label>
+              <span>Sugar</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="phone" class="input" id="no">
+              <label for="">B.P</label>
+              <span>B.P</span>
+            </div>
+            <div class="input-container">
+                <input type="text" name="phone" class="input" id="no">
+                <label for="">SP02</label>
+                <span>SPO2</span>
+            </div>
+            <div class="input-container">
+                <input type="text" name="phone" class="input" id="no">
+                <label for="">Pulse</label>
+                <span>Pulse</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="app.js"></script>
+    <script>
+      let name=document.getElementById("name").value;
+      let email=document.getElementById("email").value;
+      let no=document.getElementById("no").value;
+      let message=document.getElementById("message").value;
+
+      function Mail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "gsafal122@gmail.com",
+    Password : "77178EE05C64AEC46B18459B1B21F13C6776",
+    To : 'gsafal122@gmail.com',
+    From : "gsafal122@gmail.com",
+    Subject : "This is the subject",
+    Body : "Name :"+ name +"<br/> email:" + email+"<br/>body:"+message
+}).then(
+  message => alert(message)
+);
+      }
+    </script>
+  </body>
+</html>

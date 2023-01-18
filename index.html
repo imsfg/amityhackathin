@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="w1">
+        <header>
+            <a href="#" class="logo"><i class="ri-hospital-fill"></i><span>Logo</span></a>
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Health parameter</a></li>
+                <li><a href="#">Disease predictor</a></li>
+            </ul>
+            <div class="main">
+                <a href="logout.php" class="user"><i class="ri-user-fill"></i><span>logout <?php echo $_SESSION['username']?></span></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+                <div class="bx bx-menu" id="menu-icon"></div>
+                <div class="search">
+                    <input type="text" id="city" placeholder="Search.."><i class="ri-search-line" id="buttton"></i></div>
+            </div>
+        </header>
+    </section>
+    <section class="w2">
+        <div class="table2">
+            <h1>Weather For <span id="cityname">Delhi</span> </h1>
+            <div class="table">
+                <div class="a1">
+                    <div class="heading">
+                        <h1>Temprature</h1>
+                    </div>
+                    <div class="heading2">
+                        <span id="temp">348C</span>
+                        <p>max_temp is <span id="max_temp"></span></p>
+                        <p>min_temp is <span id="min_temp"></span></p>
+                        <p>feels_like is <span id="feels_like"></span></p>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="heading">
+                        <h1>Humidity</h1>
+                    </div>
+                    <div class="heading2">
+                        <span id="humidity">348*C</span>
+                        <p>cloud_pct <span id="cloud_pct"></span></p>
+                        <p>wind_degrees <span id="wind_degrees"></span></p>
+                        <p>wind_speed <span id="wind_speed"></span></p>
+                    </div>
+                </div>
+                <div class="a1" id="a11">
+                    <div class="heading">
+                        <h1>Alert</h1>
+                    </div>
+                    <div class="heading2">
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="data">
+        <h1>Weather for other common places</h1>
+        <table id="customers">
+            <tr>
+                
+                <th>Cities</th>
+                <th>feels_like</th>
+                <th>humidity</th>
+                <th>max_temp</th>
+                <th>min_temp</th>
+                <th>sunrise</th>
+                <th>sunset</th>
+                <th>temp</th>
+                <th>wind_degrees</th>
+                <th>wind_speed</th>
+            </tr>
+            <tr>
+
+                <td><b>Mumbai</b></td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><b>Bengalaru</b></td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><b>Kolkata</b></td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><b>Hyderabad</b></td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><b>Chennai</b></td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="style.js"></script>
+</body>
+
+</html>
